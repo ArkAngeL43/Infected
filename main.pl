@@ -1,4 +1,60 @@
 #!/usr/bin/perl
+#
+# Author   => ArkAngeL43
+# Language => Perl
+# 
+# PACKAGES:
+#       Imager::QRCode
+#       HTTP::Tiny
+#       Term::ANSIColor
+#       Image::ExifTools
+#       Text::Table
+#
+#
+#
+# Program idea: the og idea of this script was to recrusively generate QR codes individually or in a list of URL's by generating the QR codes you are embedding each URL in the file
+#
+##                                                        =--_
+#                                         .-""""""-.     |* _)
+#                                        /          \   /  /
+#                                       /            \_/  /
+#           _                          /|                /
+#       _-'"/\                        / |    ____    _.-"            _
+#    _-'   (  '-_            _       (   \  |\  /\  ||           .-'".".
+#_.-'       '.   `'-._   .-'"/'.      "   | |/ /  | |/        _-"   (   '-_
+#             '.      _-"   (   '-_       \ | /   \ |     _.-'       )     "-._
+#           _.'   _.-'       )     "-._    ||\\   |\\  '"'        .-'
+#         '               .-'          `'  || \\  ||))
+#   __  _  ___  _ ____________ _____  ___ _|\ _|\_|\\/ _______________  ___   _
+#                       c  c  " c C ""C  " ""  "" ""
+#                   c       C
+#              C        C
+#                   C
+#    C     c
+#
+#
+#Powered 
+#      By
+#        /$$$$$$$                     /$$
+#        | $$__  $$                   | $$
+#        | $$  \ $$ /$$$$$$   /$$$$$$ | $$
+#        | $$$$$$$//$$__  $$ /$$__  $$| $$
+#        | $$____/| $$$$$$$$| $$  \__/| $$
+#        | $$     | $$_____/| $$      | $$
+#        | $$     |  $$$$$$$| $$      | $$
+#        |__/      \_______/|__/      |__/
+#
+#--------------------------------------------------------------------------------
+#
+#
+#
+#
+# Execution time for 200+ url render and generation; 2.3s
+# Execution time for single gen, .1s
+
+
+
+
 use strict;
 use warnings;
 use Getopt::Std;
@@ -63,8 +119,8 @@ sub list_qr_gen() {
 sub filechecking() {
     # if opts{f} is a boolean based if statement while opts{f} is a string name, == is not astatement unless my defines opts as booltstring
     if ($opts{f}) {
-        say "[ INFO ] READ FILE SLEEPING, FOR 5 SECONDS WAITING FOR USER READ";
-        sleep(5);
+        #say "[ INFO ] READ FILE SLEEPING, FOR 5 SECONDS WAITING FOR USER READ";
+        #sleep(5);
         open(F, '<'. $list) or die $!;
         # while loop to open the file
         while (<F>) {
@@ -119,7 +175,7 @@ sub filechecking() {
 
                 # load table 
                 foreach (keys %$infofinalgen) {
-                    $tb->load( [1, $_,    $$info{$_}] );
+                    $tb->load( [1, $_,    $$infofinalgen{$_}] );
                     #print "\033[37m[ \033[34mEXIT DATA \033[37m] \033[32m $_ => $$info{$_}\n";
                 }
 
