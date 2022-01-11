@@ -86,3 +86,13 @@ Infected is a perl script that autogenerates QR_Codes, with the option of parsin
 │1            ║FilePermissions    │        rw-r--r--        │
 └─────────────╨───────────────────┴─────────────────────────┘
 ```
+
+# Usage, Installs, and understanding 
+
+```
+Before i start this kinda was a personal project, when i first started my road to legacy programming i picked up perl ( specifcially perl 5 ) and well got used to it, so i made this small 6 line script which would automate generating QR codes but it really wasnt handy, it was raining today when i stumbled across the file named "Q4R.pl" which was stored in a very old USB, i opened it up and got alot of general ideas of what i could to so i turned it into a way better script with general purposes and usages
+
+alot of scripts and most websites have you select a template and even URL 1 by 1 by 1 constantly which can take a fuck load of time, this one allows you to take a list of URL's, throw it as a -f argument in the script amd generate them all in a matter of seconds, im not kidding. i added a sleep method for purpose so the user could read the output before the parsing starts, but when thats done you could generate up to 30 QR codes and images a second, i parsed a list of 100 urls and it still generated in under 2 seconds, that was depending also on my connection given that each URL is tested before inputting or parsing to the generator
+
+install => git clone https://github.com/ArkAngeL43/infected.git
+```
