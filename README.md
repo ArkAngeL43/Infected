@@ -41,6 +41,7 @@
 Infected is a perl script that autogenerates QR_Codes, with the option of parsing a list and getting the EXIF data of the QR code
 
 # EXIF of the average generated bar code
+```
 ┌─────────────╥───────────────────┬─────────────────────────┐
 │ Data Number ║ Data              │After DATA EXIF          │
 ├─────────────╫───────────────────┼─────────────────────────┤
@@ -84,3 +85,4 @@ Infected is a perl script that autogenerates QR_Codes, with the option of parsin
 ├─────────────╫───────────────────┼─────────────────────────┤
 │1            ║FilePermissions    │        rw-r--r--        │
 └─────────────╨───────────────────┴─────────────────────────┘
+```
